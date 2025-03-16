@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanbin Lu - Research Page</title>
+    <style>
+        /* Reduce the base font size */
+        html {
+            font-size: 14px; /* Default is usually 16px; reducing it makes all fonts smaller */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #f9f9f9;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem; /* Adjusted */
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1rem; /* Adjusted */
+            font-weight: 300;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 1.5rem; /* Adjusted */
+            margin-bottom: 10px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        section p {
+            margin: 10px 0;
+            font-size: 0.9rem; /* Adjusted */
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .about div {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .links {
+            margin-top: 10px;
+        }
+
+        .links a {
+            margin-right: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem; /* Adjusted */
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .publication-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .publication-item img {
+            width: 250px; /* Increased image size */
+            height: 150px; /* Increased image size */
+            object-fit: cover;
+            margin-right: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .publication-item div {
+            flex: 1;
+        }
+
+        .publication-item strong {
+            font-size: 1rem;
+        }
+
+        .publication-item p {
+            margin: 5px 0;
+            font-size: 0.9rem; /* Adjusted */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 10px;
+            background-color: #333;
+            color: #f9f9f9;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.8rem; /* Adjusted */
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fanbin Lu</h1>
+        <p>Ph.D. Student, CUHK</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <div class="about">
+                <img src="images/fanbin.jpg" alt="Fanbin Lu">
+                <div>
+                    <p>
+                        I am currently a PhD student at Computer Science and Engineering department, the Chinese University of Hong Kong (CUHK), under the supervision of <a href="https://jiaya.me/home">Prof. Jiaya Jia</a> and <a href="https://www.cse.cuhk.edu.hk/~cwfu/">Prof. Chi-Wing Fu</a>. Before that, I obtained my Bachelor's Degree at Shanghai Jiao Tong University (SJTU) in 2019.<br><br>
+                        My research interest includes reasoning VLMs and computer-use agents.<br><br>
+                        I will graduate in 2025 Fall and drop me an email if you are recruiting.<br>
+                    </p>
+                    <div class="links">
+                        <a href="mailto:fblu21@cse.cuhk.edu.hk">Email</a>
+                        <a href="https://scholar.google.com/citations?user=77aaxGgAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
+                        <a href="https://github.com/FanbinLu" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Publications</h2>
+            <ul>
+                <li class="publication-item">
+                    <img src="images/steve.jpg" alt="STEVE Paper Illustration">
+                    <div>
+                        <strong>STEVE: A Step Verification Pipeline for Computer-use Agent Training</strong><br />
+                        <b>Fanbin Lu</b>, Zhisheng Zhong, Ziqin Wei, Shu Liu, Chi-Wing Fu, Jiaya Jia <br>- [Preprint, 2025]
+                        <a href="#">[Link]</a><br>
+                        <em></em>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/segzero.jpg" alt="Seg-Zero Paper Illustration">
+                    <div>
+                        <strong>Seg-Zero: Reasoning-Chain Guided Segmentation via Cognitive Reinforcement</strong><br />
+                        Yuqi Liu, Bohao Peng, Zhisheng Zhong, Zihao Yue, <b>Fanbin Lu</b>, Bei Yu, Jiaya Jia <br>- [Preprint, 2025] 
+                        <a href="https://arxiv.org/abs/2503.06520">[Link]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/kd.jpg" alt="3D Sema">
+                    <div>
+                        <strong>Progressively knowledge distillation via re-parameterizing diffusion reverse process</strong><br />
+                        Xufeng Yao, <b>Fanbin Lu</b>, Yuechen Zhang, Xinyun Zhang, Wenqian Zhao, Bei Yu <br>- [AAAI, 2023]
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/29579">[Link]</a>
+                    </div>
+                <li class="publication-item">
+                    <img src="images/anomaly.jpg" alt="Anomalies Paper Illustration">
+                    <div>
+                        <strong>Removing anomalies as noises for industrial defect localization</strong><br />
+                        <b>Fanbin Lu</b>, Xufeng Yao, Chi-Wing Fu, Jiaya Jia <br>- [ICCV, 2023]
+                        <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Lu_Removing_Anomalies_as_Noises_for_Industrial_Defect_Localization_ICCV_2023_paper.html">[Link]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/spherical-transformer.jpg" alt="Spherical Transformer Illustration">
+                    <div>
+                        <strong>Spherical transformer for lidar-based 3d recognition</strong><br />
+                        Xin Lai, Yukang Chen, <b>Fanbin Lu</b>, Jianhui Liu, Jiaya Jia <br>- [CVPR, 2023]
+                        <a href="https://arxiv.org/abs/2303.12766">[Link]</a>
+                    </div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/boost.jpg" alt="3D Sema">
+                    <div>
+                        <strong>Boosting single-frame 3D object detection by simulating multi-frame point clouds</strong><br />
+                        Wu Zheng, Li Jiang, <b>Fanbin Lu</b>, Yangyang Ye, Chi-Wing Fu<br>- [ACM MM, 2022]
+                        <a href="https://arxiv.org/abs/2207.01030">[Link]</a>
+                    </div>
+            </ul>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <p>
+                <strong>Ph.D. student</strong> - CUHK, Hong Kong, 2021-now<br>
+                <strong>Research Intern</strong> - SmartMore, Hong Kong, 2020-2025<br>
+                <strong>Research Intern</strong> - Huawei, Shanghai, 2020<br>
+            </p>
+        </section>
+        <section>
+            <h2>Selected Awards</h2>
+            <ul>
+                <li>&#8226; National Scholarship of China (2%), 2017 </li>
+                <li>&#8226; Merit Student of SJTU (5%), 2017 </li>
+                <li>&#8226; YITU scholarship, 2017 </li>
+            </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 Fanbin Lu, CUHK </p>
+    </footer>
+</body>
+</html>
