@@ -103,8 +103,8 @@
 
         .publication-item img {
             width: 250px; /* Increased image size */
-            height: 150px; /* Increased image size */
-            object-fit: cover;
+            height: auto; /* Increased image size */
+            object-fit: contain;
             margin-right: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
@@ -178,6 +178,15 @@
         <section>
             <h2>Publications</h2>
             <ul>
+                <li class="publication-item">
+                    <img src="images/performance.png" alt="r1">
+                    <div>
+                        <strong>STEVE-R1: Towards Long Reasoning Computer-use Agents</strong><br />
+                        A R1-like reasoning agent for computer interaction, with enhanced capabilities for long text & image context. State-of-the-art performance on WindowsAgentArena and OSWorld benchmarks. <br />
+                        <a hre="https://huggingface.co/Fanbin/STEVE-R1-7B-SFT">[Model]</a><a hre="https://huggingface.co/datasets/Fanbin/waa_steve_trajectories">[Data]</a><a href="https://github.com/FanbinLu/STEVE-R1">[project]</a><br>
+                        <em></em>
+                    </div>
+                </li>
                 <li class="publication-item">
                     <img src="images/steve.jpg" alt="STEVE Paper Illustration">
                     <div>
