@@ -3,257 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fanbin Lu, Ph.D. student at CUHK. Research in native multimodal models, GUI agents, and LLM code evolution.">
     <title>Fanbin Lu - Research Page</title>
     <style>
-        /* Reduce the base font size */
-        html {
-            font-size: 16px; /* Default is usually 16px; reducing it makes all fonts smaller */
+        * { box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; line-height: 1.65; margin: 0; background: #f9f9f9; color: #333; }
+        header { background: #333; color: #f9f9f9; padding: 25px 16px 20px; text-align: center; }
+        header h1 { margin: 0; font-size: 1.9rem; font-weight: 600; }
+        header p { margin: 4px 0 12px; font-size: 1rem; }
+        nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; }
+        nav a { color: #eee; font-size: .88rem; }
+        main { max-width: 940px; margin: 30px auto; padding: 0 24px; }
+        section { margin-bottom: 36px; scroll-margin-top: 20px; }
+        h2 { font-size: 1.45rem; margin: 0 0 18px; border-bottom: 2px solid #ddd; padding-bottom: 6px; }
+        h3 { font-size: 1rem; line-height: 1.5; margin: 0 0 5px; }
+        p { margin: 8px 0; font-size: .94rem; }
+        a { color: #0867bd; text-decoration: none; overflow-wrap: anywhere; }
+        a:hover { text-decoration: underline; }
+        a:focus-visible { outline: 2px solid #0867bd; outline-offset: 4px; }
+        .about { display: flex; gap: 26px; align-items: center; }
+        .portrait { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; flex-shrink: 0; }
+        .about > div { flex: 1; min-width: 0; }
+        .links, .paper-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 12px; font-size: .9rem; }
+        .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+        .research-tags span { background: #eaf1f8; color: #315775; border-radius: 4px; padding: 4px 10px; font-size: .8rem; }
+        .publications { margin: 0; padding: 0; list-style: none; }
+        .publication-item { display: flex; gap: 22px; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 1px solid #e4e4e4; align-items: flex-start; }
+        .publication-item:last-child { border-bottom: 0; padding-bottom: 0; }
+        .publication-item > img { width: 250px; flex: 0 0 250px; height: auto; object-fit: contain; border: 1px solid #ddd; border-radius: 5px; background: white; }
+        .publication-item > div { flex: 1; min-width: 0; }
+        .publication-item p { margin: 5px 0; font-size: .88rem; }
+        .venue { color: #53657a; font-weight: 600; }
+        .entry { margin-bottom: 20px; }
+        .entry-heading { display: flex; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; }
+        .entry-heading time, .entry-date { color: #666; font-size: .86rem; }
+        .entry ul { margin: 8px 0 0; padding-left: 20px; font-size: .9rem; }
+        .entry li { margin-bottom: 5px; }
+        .awards { padding-left: 20px; font-size: .94rem; }
+        footer { text-align: center; margin-top: 40px; padding: 22px 16px; background: #333; color: #f9f9f9; }
+        footer p { margin: 0; font-size: .8rem; }
+        @media (max-width: 640px) {
+            main { padding: 0 18px; margin-top: 24px; }
+            .about { flex-direction: column; align-items: flex-start; gap: 14px; }
+            .portrait { width: 125px; height: 125px; }
+            .publication-item { flex-direction: column; gap: 14px; }
+            .publication-item > img { width: 100%; max-width: 350px; flex: auto; }
+            .entry-heading { flex-direction: column; gap: 0; }
         }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #f9f9f9;
-            padding: 20px 10px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem; /* Adjusted */
-            font-weight: 600;
-        }
-
-        header p {
-            margin: 5px 0 0;
-            font-size: 1rem; /* Adjusted */
-            font-weight: 300;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 0 10px;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        section h2 {
-            font-size: 1.5rem; /* Adjusted */
-            margin-bottom: 10px;
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        section p {
-            margin: 10px 0;
-            font-size: 0.9rem; /* Adjusted */
-        }
-
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .about img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        .about div {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .links {
-            margin-top: 10px;
-        }
-
-        .links a {
-            margin-right: 15px;
-            color: #007bff;
-            text-decoration: none;
-            font-size: 0.9rem; /* Adjusted */
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
-
-        .publication-item {
-            display: flex;
-            margin-bottom: 30px;
-            align-items: flex-start;
-        }
-
-        .publication-item img {
-            width: 250px; /* Increased image size */
-            height: auto; /* Increased image size */
-            object-fit: contain;
-            margin-right: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .publication-item div {
-            flex: 1;
-        }
-
-        .publication-item strong {
-            font-size: 1rem;
-        }
-
-        .publication-item p {
-            margin: 5px 0;
-            font-size: 0.9rem; /* Adjusted */
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 10px;
-            background-color: #333;
-            color: #f9f9f9;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.8rem; /* Adjusted */
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        ul {
-            padding: 0;
-            list-style: none;
-        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>Fanbin Lu</h1>
-        <p>Ph.D. Student, CUHK</p>
+        <h1>Fanbin Lu <span lang="zh-CN">(卢范斌)</span></h1>
+        <p>Ph.D. Student, The Chinese University of Hong Kong</p>
+        <nav aria-label="Main navigation"><a href="#about">About</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="files/Fanbin_Lu_CV.pdf">CV</a></nav>
     </header>
     <main>
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <div class="about">
-                <img src="images/fanbin.jpg" alt="Fanbin Lu">
+                <img class="portrait" src="images/fanbin.jpg" alt="Portrait of Fanbin Lu" width="150" height="150">
                 <div>
-                    <p>
-                        I am currently a PhD student at Computer Science and Engineering department, the Chinese University of Hong Kong (CUHK), under the supervision of <a href="https://jiaya.me/home">Prof. Jiaya Jia</a> and <a href="https://www.cse.cuhk.edu.hk/~cwfu/">Prof. Chi-Wing Fu</a>. Before that, I obtained my Bachelor's Degree at Shanghai Jiao Tong University (SJTU) in 2019.<br><br>
-                        My research interest includes reasoning VLMs and computer-use agents.<br><br>
-                        I will graduate in 2025 Fall and drop me an email if you are recruiting.<br>
-                    </p>
-                    <div class="links">
-                        <a href="mailto:fblu21@cse.cuhk.edu.hk">Email</a>
-                        <a href="https://scholar.google.com/citations?user=77aaxGgAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a>
-                        <a href="https://github.com/FanbinLu" target="_blank">GitHub</a>
-                    </div>
+                    <p>I am a Ph.D. student in the Department of Computer Science and Engineering at The Chinese University of Hong Kong (CUHK), supervised by <a href="https://jiaya.me/home">Prof. Jiaya Jia</a> and <a href="https://www.cse.cuhk.edu.hk/~cwfu/">Prof. Chi-Wing Fu</a>. I received my bachelor's degree in Automation from Shanghai Jiao Tong University (SJTU) in 2019. My expected graduation date is March 2027.</p>
+                    <p>My research focuses on native multimodal models, computer-use (GUI) agents, and LLM code evolution. I study how models learn to generate visual content, interact with computer interfaces, and accumulate reusable algorithmic knowledge.</p>
+                    <p>I am currently a research intern with Tencent Hunyuan's native multimodal model team, working on multimodal pretraining data and Code2Image generation. Previously, I worked on GUI agents and industrial anomaly detection at SmartMore.</p>
+                    <div class="links"><a href="mailto:lfb97820@gmail.com">Email</a><a href="https://scholar.google.com/citations?user=77aaxGgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a><a href="https://github.com/FanbinLu" target="_blank" rel="noopener noreferrer">GitHub</a><a href="files/Fanbin_Lu_CV.pdf">CV (PDF)</a></div>
+                    <div class="research-tags" aria-label="Research interests"><span>Native Multimodal Models</span><span>GUI Agents</span><span>LLM Code Evolution</span></div>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="publications">
             <h2>Publications</h2>
-            <ul>
+            <ul class="publications">
                 <li class="publication-item">
-                    <img src="images/traj_reward.png" alt="r1">
-                    <div>
-                        <strong>ARPO: End-to-End Policy Optimization for GUI Agents with Experience Replay</strong><br />
-                        An end-to-end policy optimization approach to train GUI agents with GRPO and rule-based rewards from OSWorld environments. <br />- [Preprint, 2025]
-                        <a hre="https://huggingface.co/Fanbin/ARPO_UITARS1.5_7B">[Model]</a><a href="https://github.com/dvlab-research/ARPO">[project]</a><br>
-                        <em></em>
-                    </div>
+                    <img src="images/leap.png" alt="LEAP shared-library evolutionary search framework" loading="lazy" decoding="async">
+                    <div><h3>LEAP: Library-driven Evolutionary Abstraction Paradigm for Large Language Models</h3><p class="authors"><b>Fanbin Lu</b>, Chi-Wing Fu, Jiaya Jia</p><p class="venue">NeurIPS 2026 · Accepted</p><p>An LLM-guided evolutionary framework that builds and refines a shared library of reusable algorithmic primitives. MDL-based admission, survival pruning, and UCB-guided routing support cross-task program synthesis on ARC-AGI-2 and mathematical optimization.</p><div class="paper-links"><a href="files/LEAP_NeurIPS_2026.pdf">Paper</a> <a href="https://openreview.net/pdf?id=CDbFRtl25r" target="_blank" rel="noopener noreferrer">OpenReview</a></div></div>
                 </li>
                 <li class="publication-item">
-                    <img src="images/steve.jpg" alt="STEVE Paper Illustration">
-                    <div>
-                        <strong>STEVE: A Step Verification Pipeline for Computer-use Agent Training</strong><br />
-                        <b>Fanbin Lu</b>, Zhisheng Zhong, Ziqin Wei, Shu Liu, Chi-Wing Fu, Jiaya Jia <br>- [Preprint, 2025]
-                        <a href="https://arxiv.org/abs/2503.12532">[Link]</a><a href="https://github.com/FanbinLu/STEVE-R1">[project]</a><br>
-                        <em></em>
-                    </div>
+                    <img src="images/hunyuanimage-3.0.png" alt="HunyuanImage 3.0: material-textured lettering and a penguin mascot" width="1280" height="768" loading="lazy" decoding="async">
+                    <div><h3>HunyuanImage 3.0 Technical Report</h3><p class="authors">Tencent Hunyuan Foundation Model Team</p><p class="venue">Technical Report, 2025</p><p>Native multimodal image generation. My contributions focus on pretraining data construction, large-scale image-text data clustering and balancing, and image categorization tools.</p><div class="paper-links"><a href="https://arxiv.org/abs/2509.23951" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0" target="_blank" rel="noopener noreferrer">Code</a></div></div>
                 </li>
                 <li class="publication-item">
-                    <img src="images/segzero.jpg" alt="Seg-Zero Paper Illustration">
-                    <div>
-                        <strong>Seg-Zero: Reasoning-Chain Guided Segmentation via Cognitive Reinforcement</strong><br />
-                        Yuqi Liu, Bohao Peng, Zhisheng Zhong, Zihao Yue, <b>Fanbin Lu</b>, Bei Yu, Jiaya Jia <br>- [Preprint, 2025] 
-                        <a href="https://arxiv.org/abs/2503.06520">[Link]</a>
-                    </div>
+                    <img src="images/traj_reward.png" alt="ARPO experience replay and GUI agent training" loading="lazy" decoding="async">
+                    <div><h3>ARPO: End-to-End Policy Optimization for GUI Agents with Experience Replay</h3><p class="authors"><b>Fanbin Lu</b>, Zhisheng Zhong, Shu Liu, Chi-Wing Fu, Jiaya Jia</p><p class="venue">Preprint, 2025</p><p>End-to-end reinforcement learning for GUI agents, combining policy optimization with experience replay to improve multi-step computer interaction.</p><div class="paper-links"><a href="https://arxiv.org/abs/2505.16282" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/JIA-Lab-research/ARPO" target="_blank" rel="noopener noreferrer">Code</a> <a href="https://huggingface.co/Fanbin/ARPO_UITARS1.5_7B" target="_blank" rel="noopener noreferrer">Model</a></div></div>
                 </li>
                 <li class="publication-item">
-                    <img src="images/kd.jpg" alt="3D Sema">
-                    <div>
-                        <strong>Progressively knowledge distillation via re-parameterizing diffusion reverse process</strong><br />
-                        Xufeng Yao, <b>Fanbin Lu</b>, Yuechen Zhang, Xinyun Zhang, Wenqian Zhao, Bei Yu <br>- [AAAI, 2023]
-                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/29579">[Link]</a>
-                    </div>
-                <li class="publication-item">
-                    <img src="images/anomaly.jpg" alt="Anomalies Paper Illustration">
-                    <div>
-                        <strong>Removing anomalies as noises for industrial defect localization</strong><br />
-                        <b>Fanbin Lu</b>, Xufeng Yao, Chi-Wing Fu, Jiaya Jia <br>- [ICCV, 2023]
-                        <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Lu_Removing_Anomalies_as_Noises_for_Industrial_Defect_Localization_ICCV_2023_paper.html">[Link]</a>
-                    </div>
+                    <img src="images/steve.jpg" alt="STEVE step verification pipeline" loading="lazy" decoding="async">
+                    <div><h3>STEVE: A Step Verification Pipeline for Computer-use Agent Training</h3><p class="authors"><b>Fanbin Lu</b>, Zhisheng Zhong, Ziqin Wei, Shu Liu, Chi-Wing Fu, Jiaya Jia</p><p class="venue">Preprint, 2025</p><p>A step verification pipeline for training computer-use agents.</p><div class="paper-links"><a href="https://arxiv.org/abs/2503.12532" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/FanbinLu/STEVE-R1" target="_blank" rel="noopener noreferrer">Code</a></div></div>
                 </li>
                 <li class="publication-item">
-                    <img src="images/spherical-transformer.jpg" alt="Spherical Transformer Illustration">
-                    <div>
-                        <strong>Spherical transformer for lidar-based 3d recognition</strong><br />
-                        Xin Lai, Yukang Chen, <b>Fanbin Lu</b>, Jianhui Liu, Jiaya Jia <br>- [CVPR, 2023]
-                        <a href="https://arxiv.org/abs/2303.12766">[Link]</a>
-                    </div>
+                    <img src="images/segzero.jpg" alt="Seg-Zero reasoning and segmentation framework" loading="lazy" decoding="async">
+                    <div><h3>Seg-Zero: Reasoning-Chain Guided Segmentation via Cognitive Reinforcement</h3><p class="authors">Yuqi Liu, Bohao Peng, Zhisheng Zhong, Zihao Yue, <b>Fanbin Lu</b>, Bei Yu, Jiaya Jia</p><p class="venue">Preprint, 2025</p><p>Reasoning-chain guided segmentation through cognitive reinforcement.</p><div class="paper-links"><a href="https://arxiv.org/abs/2503.06520" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/JIA-Lab-research/Seg-Zero" target="_blank" rel="noopener noreferrer">Code</a></div></div>
                 </li>
                 <li class="publication-item">
-                    <img src="images/boost.jpg" alt="3D Sema">
-                    <div>
-                        <strong>Boosting single-frame 3D object detection by simulating multi-frame point clouds</strong><br />
-                        Wu Zheng, Li Jiang, <b>Fanbin Lu</b>, Yangyang Ye, Chi-Wing Fu<br>- [ACM MM, 2022]
-                        <a href="https://arxiv.org/abs/2207.01030">[Link]</a>
-                    </div>
+                    <img src="images/anomaly.jpg" alt="Diffusion-based industrial defect localization" loading="lazy" decoding="async">
+                    <div><h3>Removing Anomalies as Noises for Industrial Defect Localization</h3><p class="authors"><b>Fanbin Lu</b>, Xufeng Yao, Chi-Wing Fu, Jiaya Jia</p><p class="venue">ICCV 2023</p><p>Diffusion-based industrial anomaly localization by treating anomalies as noise and reconstructing normal images.</p><div class="paper-links"><a href="https://openaccess.thecvf.com/content/ICCV2023/html/Lu_Removing_Anomalies_as_Noises_for_Industrial_Defect_Localization_ICCV_2023_paper.html" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/kd.jpg" alt="Progressive diffusion model knowledge distillation" loading="lazy" decoding="async">
+                    <div><h3>Progressively Knowledge Distillation via Re-Parameterizing Diffusion Reverse Process</h3><p class="authors">Xufeng Yao, <b>Fanbin Lu</b>, Yuechen Zhang, Xinyun Zhang, Wenqian Zhao, Bei Yu</p><p class="venue">AAAI 2023</p><p>Progressive knowledge distillation for diffusion models through reverse-process re-parameterization.</p><div class="paper-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/29579" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/spherical-transformer.jpg" alt="Spherical transformer for LiDAR recognition" loading="lazy" decoding="async">
+                    <div><h3>Spherical Transformer for LiDAR-Based 3D Recognition</h3><p class="authors">Xin Lai, Yukang Chen, <b>Fanbin Lu</b>, Jianhui Liu, Jiaya Jia</p><p class="venue">CVPR 2023</p><p>Spherical transformer representations for LiDAR-based 3D recognition.</p><div class="paper-links"><a href="https://arxiv.org/abs/2303.12766" target="_blank" rel="noopener noreferrer">Paper</a> <a href="https://github.com/JIA-Lab-research/SphereFormer" target="_blank" rel="noopener noreferrer">Code</a></div></div>
+                </li>
+                <li class="publication-item">
+                    <img src="images/boost.jpg" alt="Single-frame 3D object detection framework" loading="lazy" decoding="async">
+                    <div><h3>Boosting Single-Frame 3D Object Detection by Simulating Multi-Frame Point Clouds</h3><p class="authors">Wu Zheng, Li Jiang, <b>Fanbin Lu</b>, Yangyang Ye, Chi-Wing Fu</p><p class="venue">ACM Multimedia 2022</p><p>Improving single-frame 3D object detection with simulated multi-frame point clouds.</p><div class="paper-links"><a href="https://arxiv.org/abs/2207.01030" target="_blank" rel="noopener noreferrer">Paper</a></div></div>
+                </li>
             </ul>
         </section>
-        <section>
-            <h2>Experience</h2>
-            <p>
-                <strong>Ph.D. student</strong> - CUHK, Hong Kong, 2021-now<br>
-                <strong>Research Intern</strong> - SmartMore, Hong Kong, 2020-2025<br>
-                <strong>Research Intern</strong> - Huawei, Shanghai, 2020<br>
-            </p>
+        <section id="experience">
+            <h2>Research Experience</h2>
+            <article class="entry">
+                <div class="entry-heading"><h3>Research Intern · Tencent Hunyuan, Shenzhen</h3><span class="entry-date">August 2025 – Present</span></div>
+                <p>Native Multimodal Model Team</p>
+                <ul><li>Contribute to native multimodal model pretraining, including HunyuanImage 3.0, through training data construction and image categorization tools.</li><li>Develop hierarchical clustering and balanced sampling for large-scale image-text data to improve data diversity, quality, and coverage of rare content.</li><li>Work on Code2Image generation and evaluation, combining asset search, HTML layout generation, and iterative rendering feedback to improve text rendering and composition.</li></ul>
+            </article>
+            <article class="entry">
+                <div class="entry-heading"><h3>Research Intern · SmartMore, Shenzhen</h3><span class="entry-date">May 2020 – July 2025</span></div>
+                <ul><li>Develop LEAP for LLM code evolution with a shared function library, MDL-based admission, and UCB-guided routing.</li><li>Research end-to-end reinforcement learning for GUI agents through ARPO, with applications to workflow automation on the ViMo industrial machine learning platform.</li><li>Develop diffusion-based industrial anomaly detection and localization; first-author work published at ICCV 2023 and applied to industrial inspection.</li></ul>
+            </article>
+            <article class="entry">
+                <div class="entry-heading"><h3>Research Intern · Huawei Noah's Ark Lab, Shanghai</h3><span class="entry-date">August 2019 – March 2020</span></div>
+                <p>Research on efficient 2D object detection and its applications.</p>
+            </article>
         </section>
-        <section>
+        <section id="education">
+            <h2>Education</h2>
+            <article class="entry">
+                <div class="entry-heading"><h3>The Chinese University of Hong Kong</h3><span class="entry-date">August 2021 – March 2027 (expected)</span></div>
+                <p>Ph.D. in Computer Science and Engineering<br>Supervisors: Prof. Jiaya Jia and Prof. Chi-Wing Fu</p>
+            </article>
+            <article class="entry">
+                <div class="entry-heading"><h3>Shanghai Jiao Tong University</h3><span class="entry-date">September 2015 – June 2019</span></div>
+                <p>Bachelor's degree in Automation · GPA: 3.7/4.3 · Top 1% of the program</p>
+            </article>
+        </section>
+        <section id="awards">
             <h2>Selected Awards</h2>
-            <ul>
-                <li>&#8226; National Scholarship of China (2%), 2017 </li>
-                <li>&#8226; Merit Student of SJTU (5%), 2017 </li>
-                <li>&#8226; YITU scholarship, 2017 </li>
-            </ul>
+            <ul class="awards"><li>National Scholarship of China (top 2%)</li><li>Merit Student of Shanghai Jiao Tong University (top 1%)</li></ul>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Fanbin Lu, CUHK </p>
-    </footer>
+    <footer><p>&copy; 2026 Fanbin Lu · Last updated November 17, 2026</p></footer>
 </body>
 </html>
